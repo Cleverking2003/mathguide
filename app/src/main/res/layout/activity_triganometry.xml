@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".Trigonometry">
+
+    <Button
+        android:id="@+id/inverseTrigonometry"
+        android:layout_width="wrap_content"
+        android:layout_height="75dp"
+        android:onClick="CloseActivity"
+        android:text="@string/f_trig_inverse"
+        app:layout_constraintBottom_toTopOf="@+id/ToHome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/value" />
+
+    <Button
+        android:id="@+id/ToHome"
+        android:layout_width="169dp"
+        android:layout_height="92dp"
+        android:layout_marginBottom="72dp"
+        android:onClick="CloseActivity"
+        android:text="@string/ToHome"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/sin_btn"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="72dp"
+        android:text="@string/sin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/angle" />
+
+    <Button
+        android:id="@+id/cos_btn"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/cos"
+        app:layout_constraintStart_toEndOf="@+id/sin_btn"
+        app:layout_constraintTop_toTopOf="@+id/sin_btn" />
+
+    <Button
+        android:id="@+id/tg_btn"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/tg"
+        app:layout_constraintStart_toEndOf="@+id/cos_btn"
+        app:layout_constraintTop_toTopOf="@+id/cos_btn" />
+
+    <Button
+        android:id="@+id/ctg_btn"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/ctg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tg_btn"
+        app:layout_constraintTop_toTopOf="@+id/tg_btn" />
+
+    <EditText
+        android:id="@+id/angle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:ems="10"
+        android:hint="@string/enter_angle"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:textColor="#43A047"
+        android:textColorHint="#43A047"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:text="@string/value"
+        android:textAlignment="center"
+        android:textColor="#43A047"
+        android:textColorHint="#43A047"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sin_btn" />
+
+    <ImageView
+        android:id="@+id/fraction"
+        android:layout_width="42dp"
+        android:layout_height="39dp"
+        app:layout_constraintBottom_toTopOf="@+id/inverseTrigonometry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sin_btn"
+        app:layout_constraintVertical_bias="0.5"
+        app:srcCompat="@android:drawable/menuitem_background" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
