@@ -68,9 +68,7 @@
         android:layout_width="400dp"
         android:layout_height="50dp"
         android:layout_marginStart="6dp"
-        android:layout_marginTop="240dp"
         android:layout_marginEnd="6dp"
-        android:layout_marginBottom="30dp"
         android:hint="@string/text_result"
         android:textAlignment="center"
         android:textColor="#43A047"
@@ -78,10 +76,10 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.501" />
+        app:layout_constraintVertical_bias="0.603" />
 
     <Button
         android:id="@+id/Transfer"
@@ -102,13 +100,14 @@
         android:layout_width="163dp"
         android:layout_height="93dp"
         android:layout_marginTop="30dp"
+        android:onClick="CloseActivity"
         android:text="@string/text_tohome"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/res"
-        tools:ignore="TextContrastCheck"
-        android:onClick="CloseActivity"/>
+        app:layout_constraintVertical_bias="0.857"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
         android:id="@+id/maxsystem"
@@ -121,4 +120,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/InputNumber" />
+
+    <Button
+        android:id="@+id/clear"
+        android:layout_width="163dp"
+        android:layout_height="93dp"
+        android:onClick="ClearArea"
+        android:text="@string/text_clear"
+        app:layout_constraintBottom_toTopOf="@+id/ToHome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/res" />
 </androidx.constraintlayout.widget.ConstraintLayout>

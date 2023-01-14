@@ -140,4 +140,5 @@
     <string name="f_trig_inverse">Обратные тригонометрические функции</string>
     <string name="enter_angle">Введите угол</string>
     <string name="value">Значение</string>
+    <string name="text_clear">Очистить поля</string>
 </resources>
