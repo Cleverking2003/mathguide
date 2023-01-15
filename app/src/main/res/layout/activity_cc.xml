@@ -78,10 +78,10 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.501" />
+        app:layout_constraintVertical_bias="0.603" />
 
     <Button
         android:id="@+id/Transfer"
@@ -107,6 +107,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/res"
+        app:layout_constraintVertical_bias="0.857"
         tools:ignore="TextContrastCheck"
         android:onClick="CloseActivity"/>
 
@@ -121,4 +122,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/InputNumber" />
+    
+    <Button
+        android:id="@+id/clear"
+        android:layout_width="163dp"
+        android:layout_height="93dp"
+        android:onClick="ClearArea"
+        android:text="@string/text_clear"
+        app:layout_constraintBottom_toTopOf="@+id/ToHome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/res" />
 </androidx.constraintlayout.widget.ConstraintLayout>
