@@ -2,16 +2,12 @@ package com.example.plottest;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.os.Bundle;
 
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
 
@@ -82,6 +78,8 @@ public class Calculator extends AppCompatActivity {
     }
 
     private void performOperation(Double number, String operation){
+        
+        boolean flag = false;
 
         // если операнд ранее не был установлен (при вводе самой первой операции)
         if(operand ==null){
@@ -98,6 +96,9 @@ public class Calculator extends AppCompatActivity {
                 case "/":
                     if (number == 0) {
                         operand = 0.0;
+                        resultField.setText("Невозможно выполнить деление на 0");
+                        numberField.setText("");
+                        flag = true;
                     } else {
                         operand /= number;
                     }
@@ -117,8 +118,10 @@ public class Calculator extends AppCompatActivity {
         DecimalFormat df = new DecimalFormat("#.######");
         df.setRoundingMode(RoundingMode.HALF_DOWN);
         String ret_str= df.format(operand.doubleValue());
-
-        resultField.setText(ret_str.replace('.', ','));
-        numberField.setText("");
+        if (!flag){
+            resultField.setText(ret_str.replace('.', ','));
+            numberField.setText("");
+            flag = false;
+        }
     }
 }
