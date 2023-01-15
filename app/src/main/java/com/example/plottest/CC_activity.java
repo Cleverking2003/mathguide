@@ -79,7 +79,7 @@ public class CC_activity extends AppCompatActivity {
             }
         }
     }
-
+    
     public void ClearArea(View view){
         input_system.setText("");
         input_new_system.setText("");

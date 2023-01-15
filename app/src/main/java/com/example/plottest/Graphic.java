@@ -127,6 +127,7 @@ public class Graphic extends AppCompatActivity {
     }
 
     static class MySecondaryLabelRenderer extends MyLineLabelRenderer {
+
         @Override
         public void drawLabel(Canvas canvas, XYGraphWidget.LineLabelStyle style,
                               Number val, float x, float y, boolean isOrigin) {

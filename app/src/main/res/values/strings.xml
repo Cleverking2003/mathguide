@@ -3,7 +3,7 @@
     <string name="appname">Математический Справочник</string>
     <string name="transferCC">Перевод Систем Счисления</string>
     <string name="calculator">Калькулятор</string>
-    <string name="triganometry_text">Тригонометрия</string>
+    <string name="trigonometry_text">Тригонометрия</string>
     <string name="guide_text">Справочник</string>
     <string name="graphics_text">Построение графиков</string>
     <string name="title_activity_scrolling_guidebook">ScrollingActivity_guidebook</string>
@@ -140,5 +140,4 @@
     <string name="f_trig_inverse">Обратные тригонометрические функции</string>
     <string name="enter_angle">Введите угол</string>
     <string name="value">Значение</string>
-    <string name="text_clear">Очистить поля</string>
 </resources>

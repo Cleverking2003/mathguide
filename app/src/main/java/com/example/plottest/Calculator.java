@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
 
@@ -79,7 +78,7 @@ public class Calculator extends AppCompatActivity {
     }
 
     private void performOperation(Double number, String operation){
-
+        
         boolean flag = false;
 
         // если операнд ранее не был установлен (при вводе самой первой операции)
