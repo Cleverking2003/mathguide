@@ -123,6 +123,7 @@
     <string name="text_tohome">На главную</string>
     <string name="text_maxSystem">Максимальная система счисления: 36</string>
     <string name="text_error">Неверный ввод</string>
+    <string name="text_clear">Очистить</string>
     <string name="function">Введите функцию</string>
     <string name="dialog_title">Ошибка!</string>
     <string name="sin">sin</string>
