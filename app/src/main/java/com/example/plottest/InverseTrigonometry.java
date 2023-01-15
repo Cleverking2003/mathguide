@@ -198,5 +198,6 @@ public class InverseTrigonometry extends AppCompatActivity {
     public void GotoMain(View view) {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+        finishAffinity();
     }
 }

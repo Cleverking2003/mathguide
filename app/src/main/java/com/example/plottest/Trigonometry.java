@@ -11,6 +11,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.Locale;
+
 public class Trigonometry extends AppCompatActivity {
 
     Button sinBtn;
@@ -34,6 +36,7 @@ public class Trigonometry extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_triganometry);
+        Locale.setDefault(Locale.US);
 
         sinBtn = findViewById(R.id.sin_btn);
         sinBtn.setOnClickListener(v -> CalculateValue(0));
@@ -81,17 +84,19 @@ public class Trigonometry extends AppCompatActivity {
                 }
                 case 2: {
                     double tan = Math.tan(radian);
-                    if (tan > 1.8 || tan < -1.8)
+                    if (tan > 58|| tan < -58) {
+                        fraction.setImageResource(android.R.drawable.menuitem_background);
                         value.setText("-");
-                    else
+                    } else
                         SetImageOrText(tan);
                     break;
                     }
                 case 3: {
                     double ctg = 1.0 / Math.tan(radian);
-                    if (ctg > 1.8 || ctg < -1.8)
+                    if (ctg > 58 || ctg < -58) {
+                        fraction.setImageResource(android.R.drawable.menuitem_background);
                         value.setText("-");
-                    else
+                    } else
                         SetImageOrText(ctg);
                     break;
                 }

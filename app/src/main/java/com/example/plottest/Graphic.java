@@ -100,7 +100,6 @@ public class Graphic extends AppCompatActivity {
                     else if (func.equals("abs")) x = Math.abs(x);
                     else throw new RuntimeException("Неизвестная функция: " + func);
                 } else {
-                    if (pos >= str.length()) throw new RuntimeException("Неожиданный конец строки");
                     throw new RuntimeException("Неожиданный символ: " + (char)ch);
                 }
 
@@ -127,6 +126,8 @@ public class Graphic extends AppCompatActivity {
     }
 
     static class MySecondaryLabelRenderer extends MyLineLabelRenderer {
+
+
         @Override
         public void drawLabel(Canvas canvas, XYGraphWidget.LineLabelStyle style,
                               Number val, float x, float y, boolean isOrigin) {
@@ -183,12 +184,13 @@ public class Graphic extends AppCompatActivity {
 
         try {
             double x = -10;
-            for (int i = 0; i < 100; i++) {
-                double val = eval(func, x + step * i);
+            while (x <= (double) 10) {
+                double val = eval(func, x);
                 if (Math.abs(val) < 30) {
-                    xVals.add(x + step * i);
+                    xVals.add(x);
                     yVals.add(val);
                 }
+                x += step;
             }
         } catch (Exception e) {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);

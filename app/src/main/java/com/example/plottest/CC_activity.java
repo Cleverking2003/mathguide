@@ -19,7 +19,6 @@ public class CC_activity extends AppCompatActivity {
     EditText input_new_system;
     EditText input_digit;
     TextView result;
-    Button clear;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +29,6 @@ public class CC_activity extends AppCompatActivity {
         input_new_system = findViewById(R.id.NewSystem);
         transfer = findViewById(R.id.Transfer);
         result = findViewById(R.id.res);
-        clear = findViewById(R.id.clear);
     }
 
     public void onTransferClick(View view) {
@@ -60,9 +58,11 @@ public class CC_activity extends AppCompatActivity {
                 // Перевод в исходную
 
                 for (char ch : digit.toCharArray()) {
-                    if((int)ch - 87  >= system){
+                    if((int)ch - 87  > system){
                         flag = false;
-                        result.setText("Неверный символ или система счисления");
+                        result.setText("Такого символа нет в данной системе исчисления");
+                        input_system.setText("");
+                        input_new_system.setText("");
                     }
                 }
 
@@ -78,12 +78,6 @@ public class CC_activity extends AppCompatActivity {
                 input_new_system.setText("");
             }
         }
-    }
-
-    public void ClearArea(View view){
-        input_system.setText("");
-        input_new_system.setText("");
-        input_digit.setText("");
     }
 
     public void CloseActivity(View view){
