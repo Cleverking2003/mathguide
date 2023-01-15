@@ -112,7 +112,10 @@ public class InverseTrigonometry extends AppCompatActivity {
                         default:
                             throw new RuntimeException("Неизвестная функция: " + func);
                     }
-                } else { throw new RuntimeException("Неожиданный символ: " + (char)ch); }
+                } else {
+                    if (pos >= str.length()) throw new RuntimeException("Неожиданный конец строки");
+                    throw new RuntimeException("Неожиданный символ: " + (char)ch);
+                }
 
                 if (eat('^')) x = Math.pow(x, parseFactor()); // exponentiation
 
